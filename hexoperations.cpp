@@ -51,19 +51,20 @@ uint32_t ConvertHexToDecimal(std::string hexFig) {
 		}
 	}
 
-	return num;//returns decimal num
+	return num; //returns decimal num
 }
 
 /**
     Converts decimal number to hexidecimal.
-    @param decimalFig - decimal figure saved as a uint32_t
-    @return hexNum - decimal conversion to hex
+    @param uint32_t decimalFig - decimal figure saved as a uint32_t
+    @return std::string hexNum - decimal conversion to hex
 */
 
 std::string ConvertDecimalToHex(uint32_t decimalFig) {
 	std::string hexNum;
 	int remainder;
 
+	if (decimalFig == 0) return ("0x0");
 	for (int i = 0; (remainder != 0) || (decimalFig != 0); i++){
 		remainder = decimalFig % 16;
 		decimalFig = (decimalFig - remainder) / 16;
@@ -91,13 +92,48 @@ std::string ConvertDecimalToHex(uint32_t decimalFig) {
 
 /**
     Adds two uint32_t figures
-    @param num1
-	@param num2
+    @param uint32_t num1
+	@param uint32_t num2
     @return (num1 + num2) - sum of both numbers
 */
 
-uint32_t Add(uint32_t num1, uint32_t num2) {
-	if ((static_cast<long long>(num1) + static_cast<long long>(num1)) > 4,294,967,295)
-		return 0;
+uint32_t ADD(uint32_t num1, uint32_t num2) {
 	return (num1 + num2);
+}
+
+/**
+    Applies the bitwise AND to only one operand
+    @param uint32_t num
+    @return (num1 + num2) - sum of both numbers
+*/
+uint32_t AND(uint32_t num1, uint32_t num2) {
+	return (num1 & num2);
+}
+
+uint32_t ASR(uint32_t num) {
+	return (num >> 1);
+}
+
+uint32_t LSR(uint32_t num) {
+	return (num << 1);
+}
+
+uint32_t LSL(uint32_t num) {
+	return (num >> 1);
+}
+
+uint32_t NOT(uint32_t num) {
+	return (~num);
+}
+
+uint32_t ORR(uint32_t num1, uint32_t num2) {
+	return (num1 | num2);
+}
+
+uint32_t SUB(uint32_t num1, uint32_t num2) {
+	return (num1 - num2);
+}
+
+uint32_t XOR(uint32_t num1, uint32_t num2) {
+	return (num1 ^ num2);
 }

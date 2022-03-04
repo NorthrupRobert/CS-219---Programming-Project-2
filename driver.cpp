@@ -13,10 +13,14 @@
 #include "start.h"
 #include "hexoperations.h"
 
+using std::endl, std::cout;
+
 int main() {
 	TitleScreen();
+	//cout << "ABOUT TO PROCESS FILE" << endl;
 	try {
-		Processor(LoadFile("Programming-Project-1.txt"));
+		Processor(LoadFile("input.txt"));
+		//std::cout << "PROCESSED FILE" << std::endl;
 	}
 	catch (const char* msg) {
 		std::cerr << msg << std::endl;
