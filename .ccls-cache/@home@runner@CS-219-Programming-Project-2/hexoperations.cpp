@@ -131,7 +131,7 @@ uint32_t ORR(uint32_t num1, uint32_t num2) {
 }
 
 uint32_t SUB(uint32_t num1, uint32_t num2) {
-	return (num2 - num1);
+	return (num1 - num2);
 }
 
 uint32_t XOR(uint32_t num1, uint32_t num2) {

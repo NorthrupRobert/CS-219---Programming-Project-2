@@ -15,5 +15,4 @@ uint32_t ORR(uint32_t num1, uint32_t num2);
 uint32_t SUB(uint32_t num1, uint32_t num2);
 uint32_t XOR(uint32_t num1, uint32_t num2);
 
-
 #endif

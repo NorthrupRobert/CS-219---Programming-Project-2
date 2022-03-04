@@ -102,7 +102,7 @@ void Processor(std::ifstream inFile) {
 	do {
 		//std::cout << "reading line " << i << std::endl;
 		inFile >> op;
-		if (op == "ADD" || op == "ORR" || op == "SUB" || op == "XOR") { //operations that require 2 operators
+		if (op == "ADD" || op == "AND" || op == "ORR" || op == "SUB" || op == "XOR") { //operations that require 2 operators
 			inFile >> arg1;
 			inFile >> arg2;
 
